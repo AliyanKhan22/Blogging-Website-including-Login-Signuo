@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .post-container {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e5ff00;
+            border-radius: 8px;
+            box-shadow:8px 8px 8px rgb(0, 0, 0);
+            border: 3px solid black;
+        }
+        .post-container p {
+            font-size: 19px;
+            line-height: 1.5;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Arial, Helvetica, sans-serif;
+        }
+        .main{
+            font-size: 53px;
+            text-shadow: 3px 3px 3px yellow;
+            font-weight: bold;
+        }
+        .main2{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>BlogSite</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#postsContainer">Posts</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="login-btn" onclick="window.location.href='signup.html'">Login</button>
+        </nav>
+        <div class="content">
+            <h1 class="main">Welcome to the Blog</h1>
+            <p class="main2">Discover amazing articles and posts here!</p>
+            <div id="postsContainer">
+            </div>
+        </div>
+    </div>
+    <script>
+        const postsContainer = document.getElementById('postsContainer');
+        const posts = JSON.parse(localStorage.getItem('posts')) || [];
+        function displayPosts() {
+            postsContainer.innerHTML = '';
+            posts.forEach(post => {
+                postsContainer.innerHTML += `
+                    <div class="post-container">
+                        <p>${post}</p>
+                    </div>
+                `;
+            });
+        }
+        displayPosts();
+    </script>
+</body>
+</html>

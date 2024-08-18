@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    Background:linear-gradient(to right,#d4be3d,#008cff,#00ffbf);
+}
+.head {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    font-weight: bold;
+    color: #ffe100;
+}
+
+.main {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 15px 15px 15px rgb(0, 0, 0);
+    width: 300px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: bold;
+    outline: none;
+    border-color:rgb(255, 255, 255) rgb(255, 255, 255) rgb(238, 255, 0) rgb(255, 255, 255);
+}
+input[type="email"]:focus{
+border-width:0px 0px 5px 0px;
+border-color:rgb(242, 255, 0);
+}
+input[type="password"]:focus{
+    border-width:0px 0px 5px 0px;
+border-color:rgb(242, 255, 0);
+}
+input[type="text"]:focus{
+    border-width:0px 0px 5px 0px;
+border-color:rgb(242, 255, 0);
+}
+
+.password-wrapper 
+{
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 23px;
+    background-color: #dcce2b;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-shadow: 6px 6px 6px black;
+    font-size: 20px;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #e1e65eca;
+    color: black;
+}
