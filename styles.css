@@ -25,22 +25,24 @@ body {
 .nav-links {
     list-style: none;
     padding: 0;
+    background-color: yellow;
 }
 
 .nav-links li {
     margin: 15px 0;
 }
 .nav-links a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 21px;
     display: block;
+    text-align: center;
 }
-.nav-links a:hover {
+/* .nav-links a:hover {
     background-color: yellow;
     padding: 10px;
     color: black;
-}
+} */
 .login-btn {
     background-color:yellow;
     color: rgb(0, 0, 0);
